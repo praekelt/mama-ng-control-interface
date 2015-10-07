@@ -44,3 +44,7 @@ local_settings.py
 
 # Node stuff
 /node_modules/
+
+# Patternlib stuff
+src/.sass-cache/*
+/sass-cache
