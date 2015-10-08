@@ -1,0 +1,56 @@
+nginxproxy:
+  restart: always
+  image: jwilder/nginx-proxy
+  volumes:
+    - /var/run/docker.sock:/tmp/docker.sock:ro
+  ports:
+    - "80:80"
+
+mamangci:
+  restart: always
+  build: ./
+  expose:
+    - "8001"
+  links:
+    - mamangcidb:mamangcidb
+  env_file: controlinterface.env
+  command: /usr/local/bin/gunicorn controlinterface.wsgi:application -w 2 -b :8001
+
+mamangcidb:
+  restart: always
+  image: aidanlister/postgres-hstore:latest
+  volumes_from:
+    - mamangcidbdata
+  ports:
+    - "5433:5432"
+
+mamangcidbdata:
+  restart: no
+  image: aidanlister/postgres-hstore:latest
+  volumes:
+    - /var/lib/postgresql
+  command: true
+
+mamangcicelery:
+  restart: always
+  build: ./
+  links:
+    - mamangcidb:mamangcidb
+    - mamangciredis:mamangciredis
+  env_file: controlinterface.env
+  command: /usr/local/bin/python manage.py celery worker --loglevel=info
+
+mamangcicelerybeat:
+  restart: always
+  build: ./
+  links:
+    - mamangcidb:mamangcidb
+    - mamangciredis:mamangciredis
+  env_file: controlinterface.env
+  command: /usr/local/bin/python manage.py celery beat --loglevel=info
+
+mamangciredis:
+  restart: always
+  image: redis:latest
+  ports:
+    - "6379:6379"
