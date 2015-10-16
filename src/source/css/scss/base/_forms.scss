@@ -30,8 +30,13 @@ button, input, select, textarea {
 
 input, textarea {
 	width: 100%;
-	border: 1px solid $gray;
+	height: 2.2em;
+	border: 1px solid $grey;
+	background-color: $grey-light-2;
 	padding: $pad-half 0.65rem;
+	-webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 
 input[type=text], input[type=search], input[type=url], input[type=number], textarea {
@@ -40,15 +45,17 @@ input[type=text], input[type=search], input[type=url], input[type=number], texta
 
 button, input[type="submit"] {
 	padding: $pad-half;
-	background: $gray-dark;
-	border: 1px solid $gray;
+	background: $grey-dark;
+	border: 1px solid $grey;
 	cursor: pointer;
 }
 
 input[type="checkbox"],
 input[type="radio"] {
     width: auto;
-    margin-right: 0.3em;
+	margin: 0 0.4em 0 0;
+	height: inherit;
+	line-height: normal;
 }
 
 input[type="search"] {
@@ -61,21 +68,33 @@ input[type="search"]::-webkit-search-decoration {
     -webkit-appearance: none;
 }
 
+select {
+	width: 100%;
+	height: 2.2em;
+	border: 1px solid $grey;
+	background-color: $grey-light-2;
+	padding: $pad-half 0.65rem;
+	border-radius: 0;
+	-webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
 //Form Field Container
 .field-container {
 	margin-bottom: $space;
 }
 
 .inline-form {
-	
+
 	fieldset, .inline-container {
 		position: relative;
 	}
-	
+
 	input[type=submit], button, .btn {
 		font-size: $font-size-slightly-smaller;
 		padding: 0.65rem 1.3rem;
-		background: $gray-dark;
+		background: $grey-dark;
 		position: absolute;
 		top: 0;
 		right: 0;
@@ -83,7 +102,7 @@ input[type="search"]::-webkit-search-decoration {
 		width: auto;
 
 		&:hover, &:focus {
-			background: $gray;
+			background: $grey;
 			color: $white;
 		}
 	}
@@ -95,12 +114,12 @@ input[type="search"]::-webkit-search-decoration {
 	@media all and (min-width: $bp-med) {
 		width: 82%;
 
-	} 
-	
+	}
+
 	fieldset, .inline-container {
 		position: relative;
 	}
-	
+
 	input[type=submit], button {
 		position: absolute;
 		top: 0;
@@ -133,6 +152,6 @@ input[type="search"]::-webkit-search-decoration {
 	background: none;
 	padding: 0.78em 1em;
 	border: 0;
-	border-left: 1px solid $gray;
-	color: $gray;
+	border-left: 1px solid $grey;
+	color: $grey;
 }
