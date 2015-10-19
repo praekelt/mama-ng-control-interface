@@ -3,6 +3,70 @@
 	font-family: $font-secondary;
 }
 
+/* Text color overrides */
+/* Primary */
+.text-green {
+	color: $green;
+}
+
+.text-purple {
+	color: $purple;
+}
+
+.text-orange {
+	color: $orange;
+}
+
+.text-red {
+	color: $red;
+}
+
+/* Secondary */
+.text-yellow {
+	color: $yellow;
+}
+
+.text-mint {
+	color: $mint;
+}
+
+.text-white {
+	color: $white;
+}
+
+.text-black {
+	color: $black;
+}
+
+.text-grey-med {
+	color: $grey-med;
+}
+
+/* Shades */
+.text-grey-light {
+	color: $grey-light;
+}
+
+.text-grey-light-2 {
+	color: $grey-light-2;
+}
+
+.text-grey-light-3 {
+	color: $grey-light-3;
+}
+
+.text-grey-light-4 {
+	color: $grey-light-4;
+}
+
+.text-grey-dark {
+	color: $grey-dark;
+}
+
+.text-grey-dark-2 {
+	color: $grey-dark-2;
+}
+
 //Intro text
 .intro {
 	font-size: $font-size-slightly-larger;
@@ -44,7 +108,7 @@
 .grade {
 	display: block;
 	font-weight: bold;
-	background: $gray;
+	background: $grey;
 	color: $white;
 	min-height: 4.5rem;
 	padding-top: 1.5rem;
@@ -53,7 +117,7 @@
 
 /* Eyebrow */
 .eyebrow {
-	background: $gray-dark;
+	background: $grey-dark;
 	color: $white;
 	padding: 0.2em;
 	display: inline-block;
@@ -62,7 +126,7 @@
 
 .eyebrow-image {
 	position: relative;
-	
+
 	img {
 		position: relative;
 		z-index: 0;

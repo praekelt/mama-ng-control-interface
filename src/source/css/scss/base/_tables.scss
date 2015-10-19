@@ -2,17 +2,33 @@
     $Table
 \*------------------------------------*/
 table {
-	border-collapse: collapse; 
-	border-spacing: 0; 
-	border: 1px solid $gray;
-	width: 100%;
+	background-color : $table-bg;
+	border-collapse : collapse;
+	border-spacing : 0;
+	width : 100%;
 }
-th {
-	text-align: left;
-	border: 1px solid $gray;
-	padding: 0.2em;
-}
+
+th,
 td {
-	border: 1px solid $gray;
-	padding: 0.2em;
+	vertical-align : top;
+	border-top : 1px solid $table-border-color;
+	padding : $table-cell-padding;
+}
+
+thead th {
+    vertical-align : bottom;
+    border-bottom : 2px solid $table-border-color;
+	color : $grey-med;
+}
+
+tfoot th {
+    vertical-align : bottom;
+    border-top : 2px solid $table-border-color;
+	color : $grey-med;
+}
+
+.table-striped {
+ 	tbody tr:nth-of-type(odd) {
+	    background-color: $table-bg-accent;
+	}
 }

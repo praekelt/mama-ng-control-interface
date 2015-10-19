@@ -2,23 +2,45 @@
     $VARIABLES
 \*------------------------------------*/
 
-//Colors
-$gray : #808080;
-$gray-light : #f9f9f9;
-$gray-light-2 : #eee;
-$gray-light-3 : #ddd;
-$gray-light-4 : #bbb;
-$gray-med : #666;
-$gray-dark : #333;
-$gray-dark-2 : #131313;
+// Primary Colors
+$green : #007c47;
+$purple : #7f1160;
+$orange : #fe9019;
+$red : #E71951;
+
+$primary : $green;
+$secondary : $purple;
+
+// Secondary Colors
+$yellow : #fee967;
+$mint : #10d599;
 $white : #fff;
 $black : #000;
+$grey-med : #646464;
+
+// Shades
+$grey : #808080;
+$grey-light : #f9f9f9;
+$grey-light-2 : #eee;
+$grey-light-3 : #ddd;
+$grey-light-4 : #bbb;
+$grey-med : #646464;
+$grey-dark : #333;
+$grey-dark-2 : #131313;
 
 $dim : rgba(0,0,0,0.5);
 $dimmer : rgba(0,0,0,0.8);
 
-$error : #f00;
-$valid : #089e00;
+$body-bg : $white;
+$body-color : $grey-dark;
+
+$error : $red;
+$valid : $green;
+$warning : $orange;
+$info : $purple;
+
+$link-color : $purple;
+$link-hover-color : $purple;
 
 $brand-facebook: #03539e;
 $brand-twitter: #35ccff;
@@ -33,6 +55,24 @@ $font-size-slightly-larger : 1.0625em;
 $font-size-slightly-smaller : 0.875em;
 $font-size-sm : 0.75em;
 $font-size-large : 1.4375em;
+
+$line-height : 1.5;
+
+$link-decoration : none;
+$link-hover-decoration : underline;
+
+//Tables
+$table-cell-padding : .75rem;
+$table-sm-cell-padding : .3rem;
+
+$table-bg : transparent;
+$table-bg-accent : $grey-light-2;
+$table-bg-hover : $grey-light-4;
+$table-bg-active : $table-bg-hover;
+
+$table-border-color : $grey-light-3;
+
+
 
 //Layout
 $max-width: 72rem;

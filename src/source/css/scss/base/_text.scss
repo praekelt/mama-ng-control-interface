@@ -1,4 +1,4 @@
-/* Text-Related Elements */ 
+/* Text-Related Elements */
 p {
 	margin-bottom: $space;
 }
@@ -6,21 +6,29 @@ p {
 /* Blockquote */
 blockquote {
     font-style:italic;
-    border-left: 1px solid $gray;
-    color: $gray;
+    border-left: 1px solid $grey;
+    color: $grey;
 	padding-left: $pad;
 	margin-bottom: $space;
 }
 
-/* Horizontal Rule */ 
+/* Horizontal Rule */
 hr {
 	border: 0;
     height: 2px;
-    background: $gray-light-2;
+    background: $grey-light-2;
     margin: $space-double 0;
 }
 
 abbr {
-    border-bottom: 1px dotted $gray;
+    border-bottom: 1px dotted $grey;
     cursor: help;
+}
+
+code {
+	padding: 2px 4px;
+    font-size: 90%;
+    color: $error;
+    background-color: $grey-light;
+    border-radius: 0;
 }
