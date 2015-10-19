@@ -702,10 +702,15 @@ input[type=text], input[type=search], input[type=url], input[type=number], texta
 }
 
 button, input[type="submit"] {
+  border-radius: 5em;
   padding: 0.5rem;
   background: #333;
   border: 1px solid #808080;
   cursor: pointer;
+}
+
+button:hover, button:focus, input[type="submit"]:hover, input[type="submit"]:focus {
+  background: #262626;
 }
 
 input[type="checkbox"],
@@ -811,21 +816,33 @@ select {
 /*------------------------------------*    $Table
 \*------------------------------------*/
 table {
+  background-color: transparent;
   border-collapse: collapse;
   border-spacing: 0;
-  border: 1px solid #808080;
   width: 100%;
 }
 
-th {
-  text-align: left;
-  border: 1px solid #808080;
-  padding: 0.2em;
+th,
+td {
+  vertical-align: top;
+  border-top: 1px solid #ddd;
+  padding: 0.75rem;
 }
 
-td {
-  border: 1px solid #808080;
-  padding: 0.2em;
+thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #ddd;
+  color: #646464;
+}
+
+tfoot th {
+  vertical-align: bottom;
+  border-top: 2px solid #ddd;
+  color: #646464;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #eee;
 }
 
 .animate-fade {
@@ -1529,7 +1546,8 @@ td {
 \*------------------------------------*/
 .btn {
   display: inline-block;
-  background: #333;
+  border-radius: 1em;
+  background: #007c47;
   color: #fff;
   line-height: 1;
   font-weight: bold;
@@ -1540,6 +1558,16 @@ td {
 
 .btn:hover, .btn:focus {
   color: #fff;
+  background: #006238;
+}
+
+.btn.alt {
+  background: #7f1160;
+  color: #fff;
+}
+
+.btn.alt:hover, .btn.alt:focus {
+  background: #690e4f;
 }
 
 .btn.disabled {
